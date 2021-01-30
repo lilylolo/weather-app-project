@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+        
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/cae0f81df5.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link href="style.css" rel="stylesheet"/> 
+    
+
+</head>
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <div class="row">
+                    <div class="col">
+                        <h1 id="current-city">London</h1>
+                        <h2 id="current-date">Sunday 22:14 <i class="fas fa-moon"></i></h2>
+                            <ul>
+                                <li id="current-weather-description">
+                                    Thunderstorms
+                                </li>
+                                <li>
+                                    Humidity: <span id="current-humidity"> 97</span>%
+                                </li>
+                                <li>
+                                    Wind: <span id="current-wind-speed">20</span>m/s
+                                </li>
+                            </ul>
+                    </div>
+                    <div class="col current-weather">
+                       <p1>
+                           <span id="temperature">4</span><span href="#" id="celsuis-link">°C </span>| <span href="#" id="fahrenheit-link">°F</span>
+                        
+                        </p1> 
+                       <p2><i class="fas fa-temperature-low"></i></p2>
+                       <p3><i class="fas fa-cloud"></i></p3>                        
+                    </div>
+                    
+                </div>
+
+             <div class="row days">
+                    <div class="col-sm">
+                        Mon <br/> <i class="fas fa-cloud-sun"></i> <br> 4°
+                    </div>
+                    <div class="col-sm">
+                        Tues <br /> <i class="fas fa-cloud-sun"></i> <br> 4°
+                    </div>
+                    <div class="col-sm">
+                        Weds <br /> <i class="fas fa-cloud-sun"></i> <br> 4°
+                    </div>
+                    <div class="col-sm">
+                        Thurs <br /> <i class="fas fa-cloud-sun"></i> <br> 4°
+                    </div>
+                    <div class="col-sm">
+                        Fri <br /> <i class="fas fa-cloud-sun"></i> <br> 4°
+                    </div>
+                </div>
+
+                <div class="row search-row">
+                    <div class="col-6">
+                    <form> 
+                            <input type="text" id="city-input" placeholder="Enter a city..." autocomplete="off"/>
+                    </div>
+
+                    <div class="col-3">
+                            <input type="submit" id="search-city-button" class="btn btn-light" value="Search City"/>
+                    </div>
+
+                    <div class="col-3">
+                    <input type="click" class="btn btn-light" id="current-location-button" value="Current Location" />
+                    </div>
+
+                    </form>
+                </div>        
+            
+        </div>
+
+    </div>
+
+
+    <script src="script.js"> </script>
+
+</body>
+</html>
