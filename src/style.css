@@ -60,6 +60,11 @@ footer {
   top: -50px;
 }
 
+.btn btn light {
+  display: inline;
+  position: relative;
+}
+
 #temperature {
   font-size: 60px;
 }
