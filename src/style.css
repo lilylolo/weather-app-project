@@ -60,9 +60,32 @@ footer {
   top: -50px;
 }
 
+#fahrenheit-link,
+#celsuis-link {
+  color: #f7f4f4;
+  text-decoration: none;
+}
+
+#fahrenheit-link.active:hover,
+#celsuis-link.hover {
+  color: #f7f4f4;
+}
+
+.active {
+  color: #f7f4f4;
+  cursor: default;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.active:hover {
+  color: #f7f4f4;
+  text-decoration: none;
+  font-weight: thinner;
+}
+
 .btn btn light {
   display: inline;
-  position: relative;
 }
 
 #temperature {
