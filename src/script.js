@@ -29,11 +29,16 @@ function handleSubmit(event) {
 }
 
 function showWeather(response) {
+  let iconElement = document.querySelector("#current-icon");
+
   document.querySelector("#temperature").innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#current-weather-description").innerHTML =  response.data.weather[0].main;
   document.querySelector("#current-humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#current-wind-speed").innerHTML = Math.round(response.data.wind.speed);
+
+  iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].main);
 }
 
 function searchCurrentPosition(position) {
