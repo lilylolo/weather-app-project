@@ -33,15 +33,13 @@ function displayForecast(response) {
 
   forecastElement.innerHTML += `
   <div class="col-3">
-    <h3>${formatHours(forecast.dt * 1000)}</h3>  
+    <h4>${formatHours(forecast.dt * 1000)}</h4>  
     <img src="https://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png" alt=""/>
     <div class="forecast-temperature"><strong>${Math.round(forecast.main.temp_max)}°</strong></div> 
   </div>
   `
  }
 }
-
-
 
 function searchCity(city) {
   let apiKey = "0d8a4461749ad27853c25b2011d4ab40";
@@ -62,7 +60,6 @@ function handleSubmit(event) {
 
 function showWeather(response) {
   let iconElement = document.querySelector("#current-icon");
-
   celsuisTemperature = response.data.main.temp;
 
   document.querySelector("#temperature").innerHTML = Math.round(celsuisTemperature);
@@ -70,7 +67,6 @@ function showWeather(response) {
   document.querySelector("#current-weather-description").innerHTML =  response.data.weather[0].main;
   document.querySelector("#current-humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#current-wind-speed").innerHTML = Math.round(response.data.wind.speed);
-
   document.querySelector("#last-updated-date").innerHTML =  `Last updated: ${formatDate(response.data.dt * 1000)}`;
 
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -110,6 +106,9 @@ function showCelsuisTemperature(event) {
 
 let celsuisTemperature = null;
 
+let now = new Date();
+let currentDate = document.querySelector("#current-time");
+currentDate.innerHTML =  formatDate(now);
 
 let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
