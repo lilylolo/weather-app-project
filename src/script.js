@@ -1,3 +1,10 @@
+let celsuisTemperature = null;
+let now = new Date();
+let currentDate = document.querySelector("#current-time");
+let form = document.querySelector("form");
+let currentLocationButton = document.querySelector("#current-location-button");
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+let celsuisLink = document.querySelector("#celsuis-link");
 
 function formatDate(timestamp) {
   let date = new Date(timestamp);
@@ -104,23 +111,14 @@ function showCelsuisTemperature(event) {
   fahrenheitLink.classList.remove("active");
 }
 
-let celsuisTemperature = null;
-
-let now = new Date();
-let currentDate = document.querySelector("#current-time");
 currentDate.innerHTML =  formatDate(now);
 
-let form = document.querySelector("form");
 form.addEventListener("submit", handleSubmit);
 
-
-let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", showPosition);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
 
-let celsuisLink = document.querySelector("#celsuis-link");
 celsuisLink.addEventListener("click", showCelsuisTemperature);
 
 searchCity("London");
