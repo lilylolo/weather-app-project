@@ -95,6 +95,14 @@ footer {
 .btn btn light {
   display: inline;
 }
+#search-city-button {
+  margin-right: 10px;
+}
+
+#current-location-button,
+#search-city-button {
+  margin-top: 15px;
+}
 
 #temperature {
   font-size: 70px;
