@@ -71,7 +71,7 @@ function showWeather(response) {
   document.querySelector("#current-humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#current-wind-speed").innerHTML = Math.round(response.data.wind.speed);
 
-  document.querySelector("#current-date").innerHTML =  formatDate(response.data.dt * 1000);
+  document.querySelector("#last-updated-date").innerHTML =  `Last updated: ${formatDate(response.data.dt * 1000)}`;
 
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   iconElement.setAttribute("alt", response.data.weather[0].main);

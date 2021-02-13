@@ -14,15 +14,20 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 800;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 15px;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 ul {
+  font-size: 20px;
   list-style: none;
   text-align: left;
   padding: 0;
@@ -41,7 +46,10 @@ p1 {
 
 p2 {
   font-size: 120px;
-  margin-left: 20px;
+}
+
+.forecast-temperature {
+  font-size: 30px;
 }
 
 .hourly-forecast {
@@ -89,7 +97,7 @@ footer {
 }
 
 #temperature {
-  font-size: 60px;
+  font-size: 70px;
 }
 
 #current-units {
