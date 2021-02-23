@@ -88,6 +88,7 @@ function searchCurrentPosition(position) {
   let apiKey = "0d8a4461749ad27853c25b2011d4ab40";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(showWeather);
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showPosition(event) {
